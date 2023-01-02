@@ -115,7 +115,6 @@ if __name__ == '__main__':
         text = ''
         if len(box_list) > 0:
             # plate_img = detect_plate_model.draw_plate(box_list, crop_img.copy())
-            # box_list = np.flipud(box_list)
             for point in box_list:
                 point = detect_plate_model.order_points_clockwise(point)
                 textimg = detect_plate_model.get_rotate_crop_image(crop_img, point.astype(np.float32))
